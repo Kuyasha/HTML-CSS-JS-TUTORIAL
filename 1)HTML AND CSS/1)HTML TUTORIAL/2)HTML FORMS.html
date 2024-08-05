@@ -1,0 +1,191 @@
+<!doctype html>
+    <head>
+        <title>HTML FORMS</title>
+    </head>
+
+    <body>
+      <!-----   FORM-1    -------->
+      <form>              
+          <h1><u><b>FORM-1</b></u></h1>
+          <div> <!--type,id,name,required-->
+             <label for="username">Username</label> <br> 
+             <input type="text" id="username" name="username" required>
+          </div>
+<br>
+          <div> <!--placeholder-->
+              <label for="EMAIL">Email ID</label> <br> 
+              <input type="email" id="EMAIL" name="emailid" required placeholder="abc@gmail.com">
+          </div>
+<br>
+          <div>
+              <label for="pass">Password</label>  <br>
+              <input type="password" id="pass" name="password" required>
+          </div>
+<br>
+          <div><!--min,max,step-->
+            <label for="RANGE">Range</label> <br> 
+            <input type="range" id="RANGE" name="range" min="5" max="100" step="10">
+          </div>
+<br>
+          <div> <!--value(saves the bydefault value)-->
+            <label for="COUNTRY">Country</label> <br> 
+            <input type="country" id="COUNTRY" name="country" value="India">
+          </div>
+<br>
+          <div> <!--disabled(unclickable and default value is already given)-->
+            <label for="CITY">City</label> <br> 
+            <input type="city" id="CITY" name="city" value="Kolkata" disabled>
+          </div>
+<br>
+<hr>
+          <div> <!--RADIOBUTTON (values of the name attributes are all same,
+                                 can select only one option in radiobutton)-->
+            <p><u><b>RADIOBUTTON</b></u></p>
+            <p>Gender</p>
+            <input type="radio" name="gender" value="female">Female <br>
+            <input type="radio" name="gender" value="male">Male  <br>
+            <input type="radio" name="gender" value="other">Other 
+           </div>
+<br>
+<hr>
+          <div> <!--CHECKBOX (values of the name attributes are different,
+            can select only one option or all the options at the same time in checkboxes)-->
+            <p><u><b>CHECKBOX</b></u></p>
+            <p>Courses Done</p>
+            <input type="checkbox" name="course-1" value="C++">C++  <br>
+            <input type="checkbox" name="course-2" value="MACHINE LEARNING">MACHINE LEARNING <br>
+            <input type="checkbox" name="course-3" value="web development">WEB DEVELOPMENT
+         </div> 
+<br>
+<hr>
+         <div> <!--fieldset =>draws a box around the related elements;
+                   legend => provides a caption-->
+            <p><u><b>FIELDSET-LEGEND</b></u></p>
+             <fieldset>
+               <legend>SUBSCRIBE:</legend>
+               Name:<input type="text"> <br>
+               Email:<input type="text">
+             </fieldset>
+         </div>
+<br>
+         <div> <!--SELECT, OPTGROUP,OPTION-->
+          <p><u><b>DROPDOWN LIST</b></u></p>
+             <select name="month">
+              <p>Month</p>
+                  <option value="month-1">Jan</option>
+                  <option value="month-2">Feb</option>
+                  <option value="month-3">Mar</option>
+                  <option value="month-4">Apr</option>
+               </select>
+               <br>
+
+               <select name="select">
+               <optgroup label="Books">
+                <option value="book-1">DBMS</option>
+                <option value="book-2">ALGORITHM</option>
+                <option value="book-3" selected>PYTHON</option>
+             </optgroup>
+             <optgroup label="Snippets">
+              <option value="git">Git</option>
+              <option value="java">Java</option>
+           </optgroup>
+             </select>
+         </div>
+<br>
+<hr>
+         <div>  <!--TEXTAREA TAG-->
+                        <p><u><b>TEXTAREA ELEMENT</b></u></p>
+            <label for="my-details">Write about yourself:</label>
+            <textarea id="my-details" rows="10" cols="50"></textarea>
+         </div>
+<br>
+<br>
+          <div>
+              <input type="submit" value="Submit Form">
+          </div>
+      </form>
+<br>
+<br>      
+<hr>
+<hr>
+<hr>
+<br>
+<br>
+
+
+
+
+      <!---   FORM-2   ---->
+      <h1><u><b>FORM-2</b></u></h1>
+      <form method="get" action="welcome.php">
+        <label for="name-inp">Enter your name:</label>
+        <input type="text" name="name-inp" placeholder="Jason" />
+        <input type="text" name="name-inp" placeholder="Day" />
+        <button type="submit">SUBMIT</button>
+      </form>
+<br>
+<br>      
+<hr>
+<hr>
+<hr>
+<br>
+<br>   
+
+
+
+
+
+
+    <!------   FORM-3 ------>
+    <h1><u>FORM-3</u></h1>  
+    <form>
+        <fieldset>
+            <legend>HTML Input Tags:</legend>
+            <!--text fields-->
+            <label for="name-inp">Enter your name:</label>
+            <input type="text" name="name_inp" id="name_txt" class="textbox"/>
+            <label for="url">Enter url:</label>
+            <input type="url" name="url"/>
+            <label for="searchbox">search:</label>
+            <input type="search" name="searchbox" />
+            <input type="password" />
+            <input type="number" />
+            <input type="email" />
+            <textarea rows="10" cols="50"></textarea><br><br>
+
+            <!-- date/time -->
+            <input type="date" name="date">
+            <input type="datetime-local">
+            <input type="datetime">
+            <input type="month">
+            <input type="week">
+            <input type="time"><br><br>
+
+            <!--check box-->
+            <input name="chk1" type="checkbox">
+            <input name="chk2" type="checkbox">
+
+            <!-- radiobtn -->
+            <input name="gender" type="radio" value="male"><label>Male</label>
+            <input name="gender" type="radio" value="female"><label>Female</label>
+            <input name="gender" type="radio" value="others"><label>Others</label>
+
+            <!-- selectors -->
+            <input type="color">
+            <input type="file">
+            <input type="image" src="list.png" alt="Submit" width="48" height="48">
+            <input type="range" min="0" max="10">
+            <input type="hidden">
+
+            <input type="button" />
+            <input type="submit" value="3234"/>
+            <input type="reset" />
+
+            <button type="submit">LOGIN</button>
+        </fieldset>
+        <p>Pollution Level: <meter low="60" high="80" max="100" value="85">Very High</meter></p>
+    </form>
+
+
+  </body>
+</html>
