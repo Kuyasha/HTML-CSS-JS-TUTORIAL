@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <style type="text/css">
+            #box{
+                  margin:50px;
+                  padding:50px;
+                  height:200px;
+                  width:200px;
+                  background-color: red;
+                  box-sizing: border-box;
+            }
+        </style>
+    </head>
+
+    <body>
+        <div id='box'></div>
+
+        <h1 class="first">Something</h1>
+        <h1 class="second">Document Object MODEL</h1>
+        <p id="para">Learn more about DOM manipulation here.</p>
+        <div>
+            <h3>Inner Heading</h3>
+        </div>
+
+
+<script>
+const redBox=document.getElementById('box');
+//1)mouse down
+redBox.addEventListener('mousedown',function()
+{
+    redBox.style.backgroundColor='yellow';
+});
+
+//2)mouse up
+redBox.addEventListener('mouseup',function()
+{
+    redBox.style.backgroundColor='blue';
+});
+
+//3)mouse over 
+redBox.addEventListener('mouseover',function(){
+    console.log("Mouse Over");
+});
+
+//4)mouse enter
+redBox.addEventListener('mouseenter',function()
+{
+    console.log('Mouse Enter');
+});
+
+//5)mouse leave
+redBox.addEventListener('mouseleave',function()
+{
+    console.log('Mouse Leave');
+});
+</script>
+    </body>
+</html>
