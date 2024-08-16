@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>DOM Manipulation</title>
+    </head>
+    <body>
+        <h1 class="first">Something</h1>
+        <h1 class="second">Document Object MODEL</h1>
+        <p id="para">Learn more about DOM manipulation here.</p>
+        <div>
+            <h3>Inner Heading</h3>
+        </div>
+        <hr>
+        <hr>
+        <button id="btn1">Say Hello!</button>  
+
+        <script>
+    /*  addEventListeners() accept two parameters=>
+            1)type of event,
+            2)action(what we need to perform)
+    */
+            //1)
+            const p=document.querySelector("p"); 
+            p.addEventListener("click",function(){
+                clickPara("Hello");
+            });
+            function clickPara(name){
+                console.log(name + " Para Clicked");
+            }
+            
+            //2)
+            const b=document.getElementById('btn1');
+            b.addEventListener( "click", function(){
+                alert('hello');
+            });
+            
+            //3)Create a new button inside div
+            const btn=document.createElement("button");
+            btn.textContent="Click here";
+            btn.className="btn2";
+           //Appending the button inside div element
+            const division1=document.querySelector("div");
+            division1.appendChild(btn);
+
+            //As soon as we click on the button h3 heading will be removed.
+            btn.addEventListener('click', ()=>
+               document.querySelector('h3').remove()
+            );
+        </script>
+    </body>
+</html>
