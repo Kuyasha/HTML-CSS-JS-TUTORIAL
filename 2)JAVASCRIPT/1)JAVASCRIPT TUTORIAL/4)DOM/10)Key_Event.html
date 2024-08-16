@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <style type="text/css">
+            #search{
+                     border:1px solid black;
+            }
+        </style>
+    </head>
+
+    <body>
+        <input type="text" name="search" id="search">
+        
+<script>
+const input=document.getElementById('search');
+/*Here in these codes,using event.keyCode we can get the key which is being
+pressed,pressed down or getting released.  */
+
+//1)keypress event
+input.addEventListener('keypress',(event)=>
+{
+    console.log('KEY PRESSED', event.key); //prints key
+});
+
+//2)keydown event
+input.addEventListener('keydown',(event)=>
+{
+    console.log('KEY DOWN', event.keyCode);//prints code of the key
+});
+
+//3)keyup event
+input.addEventListener('keyup',(event)=>
+{
+    console.log('KEY UP', event.key); //prints key
+});
+
+/*
+KEY DOWN 54
+KEY PRESSED 6
+KEY UP 6
+*/
+
+</script>
+</body>
+</html>
