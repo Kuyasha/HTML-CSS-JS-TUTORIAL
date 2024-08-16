@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>DOM Manipulation</title>
+    </head>
+    <body>
+        <h1 class="first">Something</h1>
+        <h1 class="second">Document Object MODEL</h1>
+        <p id="para">Learn more about DOM manipulation here.</p>
+        <div>
+            <h3>Inner Heading</h3>
+        </div>
+
+        <script>
+            //1)QUERY SELECTOR FOR TAGS
+            var head=document.querySelector("h1"); //(prints only the first h1)
+            console.log(head); //op=><h1 class="first">Something</h1>  
+            
+            var allHead=document.querySelectorAll("h1"); //(prints all the h1)
+            console.log(allHead);//op=>NodeList(2) [h1.first, h1.second]  
+            
+            
+            //2)QUERY SELECTOR FOR CLASSES
+            var secondHead=document.querySelector(".second");
+            console.log(secondHead); //op=><h1 class="second">Document Object MODEL</h1>
+
+
+            //3)QUERY SELECTOR FOR IDs
+            var details=document.querySelector("#para");
+            console.log(details); //op=><p id="para">Learn more about DOM manipulation here.</p>
+        </script>
+    </body>
+</html>
+
+
+
