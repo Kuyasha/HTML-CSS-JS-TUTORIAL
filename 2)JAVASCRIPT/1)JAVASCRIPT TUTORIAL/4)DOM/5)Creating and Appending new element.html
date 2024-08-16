@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>DOM Manipulation</title>
+    </head>
+    <body>
+        <h1 class="first">Something</h1>
+        <h1 class="second">Document Object MODEL</h1>
+        <p id="para">Learn more about DOM manipulation here.</p>
+        <div>
+            <h3>Inner Heading</h3>
+        </div>
+        <hr>
+        <hr>
+        <hr>
+
+        <script>
+        //1)Creating a button using createElement
+            const btn=document.createElement("button");
+            btn.textContent="Click here";
+            btn.className="btn1";
+        //For displaying the button on the html page inside the paragraph
+            const division1=document.querySelector("p");
+            division1.appendChild(btn);
+
+        
+        //2)Create a new paragraph and append it inside the div.
+            const para=document.createElement("paragraph");
+            para.textContent="Hello, Wassup!";
+            const division2=document.querySelector("div");
+            division2.appendChild(para);
+
+
+        //3)Create two new divs and append it inside body. 
+            const newDiv1=document.createElement("div");
+            newDiv1.textContent="Good Morning!";
+            const newDiv2=document.createElement("div");
+            newDiv2.textContent="Good Night!";
+            document.body.append(newDiv1,newDiv2);   
+
+        </script>
+    </body>
+</html>
