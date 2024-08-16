@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <style type="text/css">
+            body * {
+                   margin:10px;
+                   border:2px solid black;
+            }
+        </style>
+    </head>
+
+    <body>
+        <div id='outer' style="background-color: yellow;">
+            <div id="inner" style="background-color: red;">
+                <h3 style="background-color: green;">Inner Heading</h3>
+            </div>
+        </div>
+
+        <script>
+            document.querySelector('h3').addEventListener('click',()=>
+                console.log('Heading 3 clicked')
+            );
+            //To stop bubbling out event
+//            document.querySelector('h3').addEventListener('click',(event)=>{
+//                event.stopPropagation();
+//                console.log('Heading 3 clicked')
+//            });
+
+            document.querySelector('#inner').addEventListener('click',()=>
+                console.log("Inner div clicked")
+            );
+
+            document.querySelector('#outer').addEventListener('click',()=>
+                console.log("Outer div clicked")
+            );
+
+            document.body.addEventListener('click',()=>
+                console.log("Document clicked") 
+            );
+        </script>
+    </body>
+</html>
