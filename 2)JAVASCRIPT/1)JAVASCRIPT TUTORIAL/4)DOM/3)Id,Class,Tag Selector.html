@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>DOM Manipulation</title>
+        <style></style>
+    </head>
+
+    <body>
+        <h1 class="first">Something</h1>
+        <h1 class="second">Document Object MODEL</h1>
+        <p id="para">Learn more about DOM manipulation here.</p>
+        <div>
+            <h2>Inner Heading</h2>
+        </div>
+<script>
+//1)Get Element By Id
+const details=document.getElementById('para');
+console.log(details); //op=><p id="para">Learn more about DOM manipulation here.</p>
+
+//2)Get Element By Class Name
+var secondHead=document.getElementsByClassName("second");
+console.log(secondHead);//op=>HTMLCollection [h1.second]
+
+//3)Get Element By Tag Name
+var h2_Tag=document.getElementsByTagName('h2');
+console.log(h2_Tag);//op=>HTMLCollection [h2]
+
+
+
+
+
+//Without using a loop we cant directly change properties of
+// getElementsByClassName,getElementsByTagName.
+//But for id,no need to use any loop as it is a particular element.
+//a)
+for (var i = 0; i <secondHead.length; i++)//if I want to change the color of second Heading to red.
+{
+ secondHead[i].style.color = "blue";
+}
+
+//b)
+for(var i=0;i<h2_Tag.length;i++){
+h2_Tag[i].style.fontSize="50px";
+}
+
+//c)
+details.style.backgroundColor="yellow";
+
+</script>
+
+    </body>
+</html>
