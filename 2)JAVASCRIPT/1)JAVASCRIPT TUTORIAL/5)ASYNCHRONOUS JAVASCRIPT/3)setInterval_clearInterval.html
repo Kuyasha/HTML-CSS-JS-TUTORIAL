@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Time Interval</title>
+    </head>
+    <body style="text-align: center;">
+        <h1>Time Interval</h1>
+        <h3 id="text" style="font-size:40px;"></h3>
+
+        <script>
+            const textElement=document.querySelector('#text');
+            let seconds=0;
+            textElement.textContent=`${seconds}`; //to start from 0
+
+            const timer=setInterval(() => {
+                      seconds++;
+                      textElement.textContent=`${seconds}`;
+                      //to stop at some time
+                      if(seconds>=10){
+                          clearInterval(timer);
+                      }
+            },1000);
+        </script>
+    </body>
+</html>
