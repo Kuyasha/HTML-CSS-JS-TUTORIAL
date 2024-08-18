@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+    <head>
+    <title></title>
+
+    <style type="text/css">
+#container{
+    height:500px;
+    width:300px;  
+    background-color:green;
+    display:flex;
+}
+#container div{
+    height:200px;
+    width:200px;
+}
+/*Flex-Shrink is to let elements shrink in case we dont have that much 
+space available; that is total divs width is larger than contaner width.*/
+#div1{
+  background-color: cyan;   
+  flex-shrink: 4;  
+}
+#div2{
+  background-color:orange;
+  flex-shrink: 1;    
+}
+    </style>
+    </head>
+
+    <body>
+        <div id="container">
+            <div id="div1">
+                DIV 1
+            </div>
+            <div id="div2">
+                DIV 2
+            </div>
+        </div>
+    </body>
+</html>    
