@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html>
+    <head>
+    <title></title>
+
+    <style type="text/css">
+#container{
+    height:75vh;
+    width:75vh;
+    background-color: cyan;
+
+    display:flex;                                                                                                                            
+    flex-direction: column-reverse;/*column; row-reverse; row;   */                                                                                                                                       
+}
+                     
+#container div{
+    height:100px;
+    width:100px;
+}
+
+#div1{
+    background-color:orange;
+    order:1   
+}
+#div2{
+    background-color:greenyellow;
+    order:3  
+}
+#div3{
+    background-color:blue;
+    order:6   
+}
+#div4{
+    background-color:red;
+    order:-1
+}
+    </style>
+    </head>
+
+
+
+    
+    <body>
+        <div id="container">
+            <div id="div1">
+                DIV 1
+            </div>
+            <div id="div2">
+                DIV 2
+            </div>
+            <div id="div3">
+                DIV 3
+            </div>
+            <div id="div4">
+                DIV 4
+            </div>
+        </div>
+
+    </body>
+</html>
