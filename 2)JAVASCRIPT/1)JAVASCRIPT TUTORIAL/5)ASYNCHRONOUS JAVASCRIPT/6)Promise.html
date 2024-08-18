@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>PROMISE</title>
+  </head>
+  <body>
+    <script>
+    const request=new Promise((resolve,reject)=>{
+    setTimeout(()=>{
+        //1)RESOLVE
+        //console.log('Promise initiated');
+        //resolve({firstName:"Kuyasha", lastName:"Das"});
+        
+        //2)REJECT
+        reject("Request has been rejected");
+    },1000)
+});
+
+
+//WORKING WITH PROMISES
+/*.then()=>attaches a callback function to be executed when the promise is
+fulfilled or resolved.
+
+.catch(): Attaches a callback function to be executed when the promise
+is rejected.
+
+.finally(): Attaches a callback function to be executed regardless of the
+promise's state (whether fulfilled or rejected).
+*/
+request.then((value)=>{
+    console.log(value);
+}).catch((err)=>{
+    console.log(err);
+}).finally(()=>{
+    console.log("request completed");
+});
+
+console.log(request);
+  </script>
+</body>
+</html>
