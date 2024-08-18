@@ -1,0 +1,52 @@
+<!--
+          SYNTAX=>
+          setTimeOut(callback,delay_time,arg1,arg2,...argn)
+          clearTimeout(timeOutId) =>it cancels the timeOut which is set previously.
+-->
+
+
+
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Time Out</title>
+    </head>
+
+    <body>
+        <h1>TimeOut</h1>
+        <button class="btn">Click Here</button>
+        <h3 id="text"></h3>
+        
+        <script>
+            const btnElement=document.querySelector('.btn');
+            const textElement=document.querySelector('#text');
+
+            //Adding a click event to btnElement and whenever the button
+            //is clicked;then adding a text content to textElement.
+            btnElement.addEventListener('click',() =>{
+                    textElement.textContent="Button is pressed";
+
+                    //Now I want the text to go away after 5 secs
+                    setTimeout(()=>{
+                         textElement.textContent="";
+                    },5000); //time in milliseconds
+            });
+        </script>
+    </body>
+</html>
+
+
+
+<!--Another Example Of setTimeout-
+function greet(name){
+    console.log(`Hello  ${name}!`);
+}
+
+const timeOutId=setTimeout(greet,2000,"Aparna");
+
+//clearTimeout(timeOutId);
+--->
+
+
+
+   
