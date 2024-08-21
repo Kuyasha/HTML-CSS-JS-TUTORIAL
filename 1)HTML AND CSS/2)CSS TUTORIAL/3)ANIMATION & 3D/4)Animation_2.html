@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title></title>
+        <style type="text/css">
+@keyframes changeShape{
+    from{
+        border-radius: 0%;
+    }
+    25%{ /*when the 25% animation is done,border-radius should be 12.5%*/
+        border-radius: 12.5%; 
+    }
+    50%{/*when the 25% animation is done,border-radius should be 25%*/
+        border-radius: 25%;
+    }
+    to{/*when the 100% animation is done,border-radius should be 50%;here instead of to we can write 100% as well*/
+        border-radius: 50%;
+    }
+}
+div{
+    height:100px;
+    width:100px;
+    position: absolute;
+    top:20%;
+    left:20%;
+    background-color:violet;
+    animation:changeShape 1s ease-in-out infinite; /*infinite=>infinity nos of times the animation to happen */
+            /*  changeShape 1s ease-in-out 4 alternate;  =>4 times the animation will happen and will alternate with box(border-radius:0%) and circle(border-radius:50%).*/
+}
+
+    </style>
+    </head>
+    <body>
+        <div></div>
+    </body>
+</html>
