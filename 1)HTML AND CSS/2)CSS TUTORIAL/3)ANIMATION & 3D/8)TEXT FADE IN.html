@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Static Template</title>
+
+    
+    <style type="text/css">
+/* TEXT FADE IN ANIMATION  =>(Text is visible at the start and invisible at the end */
+@keyframes fadeInAnimation{
+    0%{
+        opacity:1;
+    }
+    100%{
+        opacity:0;
+    }
+}
+
+#div1 {
+    height: 40px;
+    width: 250px;
+    position: relative;
+    top: 100px;
+    left: 100px;
+    font-size: 30px;
+    border: solid black;
+    border-width: 3px 0px 3px 0px;
+    text-align: center;
+    padding: 5px;
+    animation-name: fadeInAnimation;
+    animation-duration: 2s;
+    animation-timing-function: ease-in-out;
+    animation-iteration-count: infinite;
+  }
+  
+  </style>
+  </head>
+  <body>
+    <div id="div1">
+      Animation Fade In
+    </div>
+  </body>
+</html>
