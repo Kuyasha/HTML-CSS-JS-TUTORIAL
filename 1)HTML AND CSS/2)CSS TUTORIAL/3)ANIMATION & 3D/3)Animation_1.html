@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title></title>
+        <style type="text/css">
+
+/* There are 3 conditions happening here:
+    1)div is moving.
+    2)div is moving towards X direction;means scale is there,
+    3)div is increasing in size.
+*/
+
+div{
+    height:100px;
+    width:100px;
+    position: absolute;
+    top:20%;
+    left:20%;
+    background-color:blue;
+
+    transition:1s ease-in-out; 
+              /* 1s steps(6,end);   */ /*(here complete animation is taking 6 steps)*/                                            
+}
+
+div:hover{
+    transform:scale(1.5) translate(150px);
+}
+    </style>
+    </head>
+    <body>
+        <div></div>
+    </body>
+</html>
