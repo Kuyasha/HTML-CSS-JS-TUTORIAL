@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Animation Properties</title>
+    
+    <style type="text/css">
+/* BOUNCE THE DIV IN FIVE STAGES */
+@keyframes bounce{
+    from{
+        transform:translateY(0);
+    }
+    25%{
+        transform:translateY(300px);
+    }
+    50%{
+        transform:translateY(200px);
+    }
+    75%{
+        transform:translateY(100px);
+    }
+    to{
+        transform:translateY(50px);
+    }
+}
+
+#div1 {
+    height: 100px;
+    width: 100px;
+    position: relative;
+    top: 100px;
+    left: 100px;
+    background-color: aqua;
+    animation-name: bounce;
+    animation-duration: 2s;
+    animation-timing-function: ease-in-out;
+    animation-iteration-count: infinite;
+    animation-direction: alternate;
+  }
+    </style>
+  </head>
+  <body>
+    <div id="div1"></div>
+  </body>
+</html>
