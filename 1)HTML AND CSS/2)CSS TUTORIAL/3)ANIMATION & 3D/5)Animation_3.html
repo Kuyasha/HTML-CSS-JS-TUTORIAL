@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title></title>
+        <style type="text/css">
+@keyframes changeShape{
+    from{
+        border-radius: 0%;
+    }
+    25%{ 
+    }
+    50%{/*when the 25% animation is done,border-radius should be 25%*/
+        border-radius: 25%;
+    }
+    to{/*when the 100% animation is done,border-radius should be 50%;here instead of to we can write 100% as well*/
+        border-radius: 50%;
+    }
+}
+
+@keyframes rotate{
+    from{
+        transform: rotate(0deg);
+    }
+    to{
+        transform:rotate(360deg);
+    }
+}
+
+@keyframes reduceSize{
+    from{
+        height:200px;
+        width:200px;
+    }
+    to{
+        height:100px;
+        width:100px;
+    }
+}
+
+div{
+    height:100px;
+    width:100px;
+    position: absolute;
+    top:20%;
+    left:20%;
+    background-color:violet;
+    /*animation:changeShape 1s ease-in-out infinite;*/ /*Here we cant apply
+    all the animations together in one line.We need to mention separate 
+    animation properties */
+    animation-name: changeShape, rotate, reduceSize;
+    animation-duration: 1s,1s,1s;
+    animation-iteration-count: infinite,infinite,infinite;
+    animation-direction: alternate,alternate,alternate;
+}
+    </style>
+    </head>
+    <body>
+        <div></div>
+    </body>
+</html>
